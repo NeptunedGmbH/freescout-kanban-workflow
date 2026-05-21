@@ -1,0 +1,24 @@
+name: Release Module ZIP
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build module zip
+        run: |
+          MODULE=KanbanWorkflow
+          rsync -a --exclude .git ./ "/tmp/${MODULE}/"
+          cd /tmp && zip -r "${MODULE}.zip" "${MODULE}"
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: /tmp/KanbanWorkflow.zip
