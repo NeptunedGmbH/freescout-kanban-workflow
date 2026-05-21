@@ -127,7 +127,8 @@ class KanbanService
             $columnId,
             $swimlaneId
         );
-        if ($override !== null) {
+        // Eventy may return '' when no listener overrides the default null value.
+        if ($override !== null && $override !== '') {
             return (bool) $override;
         }
 
