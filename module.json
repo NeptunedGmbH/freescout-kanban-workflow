@@ -10,7 +10,7 @@
     "order": 1000,
     "detailsUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/tag/v1.0.4",
     "latestVersionUrl": "https://raw.githubusercontent.com/NeptunedGmbH/freescout-kanban-workflow/refs/heads/main/version.txt",
-    "latestVersionZipUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/archive/refs/tags/v1.0.4.zip",
+    "latestVersionZipUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/download/v1.0.4/KanbanWorkflow.zip",
     "changelogUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/tag/v1.0.4",
     "providers": [
         "Modules\\KanbanWorkflow\\Providers\\KanbanWorkflowServiceProvider"
