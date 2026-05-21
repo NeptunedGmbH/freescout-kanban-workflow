@@ -1,0 +1,18 @@
+{
+    "name": "Kanban Workflow",
+    "alias": "kanbanworkflow",
+    "description": "Adds a Workflows action to automatically add conversations to Kanban boards.",
+    "keywords": ["kanban", "workflow", "automation"],
+    "version": "1.0.0",
+    "active": 1,
+    "order": 1000,
+    "providers": [
+        "Modules\\KanbanWorkflow\\Providers\\KanbanWorkflowServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requiredModules": {
+        "kanban": "1.0.0",
+        "workflows": "1.0.0"
+    }
+}

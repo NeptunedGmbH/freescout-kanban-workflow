@@ -1,0 +1,12 @@
+{
+    "name": "neptunedgmbh/freescout-kanban-workflow",
+    "description": "Workflow action to add conversations to Kanban boards for FreeScout",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Modules\\KanbanWorkflow\\": ""
+        }
+    },
+    "minimum-stability": "stable"
+}
