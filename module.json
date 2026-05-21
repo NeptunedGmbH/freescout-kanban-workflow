@@ -3,9 +3,12 @@
     "alias": "kanbanworkflow",
     "description": "Adds a Workflows action to automatically add conversations to Kanban boards.",
     "keywords": ["kanban", "workflow", "automation"],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "active": 1,
     "order": 1000,
+    "latestVersionUrl": "https://raw.githubusercontent.com/NeptunedGmbH/freescout-kanban-workflow/main/module.json",
+    "latestVersionZipUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/archive/refs/tags/v1.0.1.zip",
+    "changelogUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases",
     "providers": [
         "Modules\\KanbanWorkflow\\Providers\\KanbanWorkflowServiceProvider"
     ],
