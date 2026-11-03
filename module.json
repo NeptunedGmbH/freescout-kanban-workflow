@@ -6,15 +6,15 @@
     "authorUrl": "https://github.com/NeptunedGmbH",
     "img": "/modules/kanbanworkflow/img/module.png",
     "keywords": ["kanban", "workflow", "automation"],
-    "version": "1.0.4",
+    "version": "1.0.5",
     "active": 1,
     "order": 1000,
-    "detailsUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/tag/v1.0.4",
+    "detailsUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/tag/v1.0.5",
     "latestVersionUrl": "https://raw.githubusercontent.com/NeptunedGmbH/freescout-kanban-workflow/refs/heads/main/version.txt",
     "latestVersionZipUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/latest/download/KanbanWorkflow.zip",
     "sha256sumsUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/latest/download/SHA256SUMS",
     "healthCommand": "kanbanworkflow:health",
-    "changelogUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/tag/v1.0.4",
+    "changelogUrl": "https://github.com/NeptunedGmbH/freescout-kanban-workflow/releases/tag/v1.0.5",
     "providers": [
         "Modules\\KanbanWorkflow\\Providers\\KanbanWorkflowServiceProvider"
     ],
