@@ -19,6 +19,9 @@ class KanbanWorkflowServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(KanbanService::class);
+        $this->commands([
+            \Modules\KanbanWorkflow\Console\HealthCommand::class,
+        ]);
     }
 
     protected function registerHooks(): void

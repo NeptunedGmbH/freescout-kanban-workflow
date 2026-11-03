@@ -1,0 +1,41 @@
+# Attach SHA256SUMS to a GitHub release that already contains KanbanWorkflow.zip.
+# UpdateGuard reads sha256sumsUrl from module.json, which points at this asset.
+name: Publish SHA256SUMS
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to hash. Empty uses the latest release.
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  sha256sums:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hash the release zip and upload SHA256SUMS
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          INPUT_TAG: ${{ github.event.inputs.tag }}
+        run: |
+          set -euo pipefail
+          tag="${INPUT_TAG:-}"
+          if [ -z "$tag" ]; then
+            tag="$(gh release view --json tagName --jq .tagName)"
+          fi
+
+          work="$(mktemp -d)"
+          gh release download "$tag" --pattern KanbanWorkflow.zip --dir "$work" --clobber
+          test -f "$work/KanbanWorkflow.zip"
+          (
+            cd "$work"
+            sha256sum KanbanWorkflow.zip
+          ) > "$work/SHA256SUMS"
+          grep -Eq '^[a-f0-9]{64}  KanbanWorkflow\.zip$' "$work/SHA256SUMS"
+          cat "$work/SHA256SUMS"
+          gh release upload "$tag" "$work/SHA256SUMS" --clobber
